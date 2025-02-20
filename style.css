@@ -1,7 +1,7 @@
 body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,40 +10,48 @@ body {
 }
 
 .profile-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 300px;
+  width: 320px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+.profile-card:hover {
+  transform: translateY(-10px);
 }
 .profile-card .profile-img img {
   width: 100%;
   height: auto;
+  display: block;
 }
 .profile-card .profile-info {
   padding: 20px;
 }
 .profile-card .profile-info h2 {
-  color: #3498db;
+  color: #ff6f61;
   margin: 0 0 10px;
+  font-size: 24px;
 }
 .profile-card .profile-info p {
   color: #333;
   margin: 0 0 20px;
+  font-size: 16px;
 }
 .profile-card .profile-info .btn-primary {
-  background-color: #3498db;
+  background-color: #6b5b95;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .profile-card .profile-info .btn-primary:hover {
-  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+  background-color: rgb(84.2625, 71.6625, 117.3375);
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=style.css.map */

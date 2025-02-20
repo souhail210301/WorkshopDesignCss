@@ -4,7 +4,7 @@
 body {
   font-family: $font-stack;
   font-size: $font-size-base;
-  background-color: $background-color;
+  background: $background-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,17 +13,23 @@ body {
 }
 
 .profile-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: $card-background;
+  border-radius: 15px;
+  @include card-shadow;
   overflow: hidden;
-  width: 300px;
+  width: 320px;
   text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px); // Effet de levée au survol
+  }
 
   .profile-img {
     img {
       width: 100%;
       height: auto;
+      display: block;
     }
   }
 
@@ -33,15 +39,17 @@ body {
     h2 {
       color: $primary-color;
       margin: 0 0 10px;
+      font-size: 24px;
     }
 
     p {
       color: $text-color;
       margin: 0 0 20px;
+      font-size: 16px;
     }
 
     .btn-primary {
-      @include button-style($primary-color, white);
+      @include button-style($secondary-color, white);
     }
   }
 }
