@@ -3,14 +3,14 @@
     color: $text-color;
     padding: 10px 20px;
     border: none;
-    border-radius: 25px; // Bordure plus arrondie
+    border-radius: 25px; 
     cursor: pointer;
     font-size: $font-size-base;
     transition: background-color 0.3s ease, transform 0.3s ease;
   
     &:hover {
       background-color: darken($bg-color, 10%);
-      transform: scale(1.05); // Effet de zoom au survol
+      transform: scale(1.05);
     }
   }
   
